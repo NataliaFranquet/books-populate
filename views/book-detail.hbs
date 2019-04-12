@@ -1,0 +1,17 @@
+<h2>Reviews</h2>
+
+  <input type="hidden" name="_id" value="{{book._id}}">
+
+  <h1>{{book.title}}</h1>
+
+  {{#each book.author}}
+    <p>{{this.name}} {{this.lastName}}</p>
+    <p>{{this.nationality}}</p>
+    <img src="{{this.pictureUrl}}" alt="">
+  {{/each}}
+
+  <p>{{book.description}}</p>
+
+  <p>Rating: {{book.rating}}</p>
+
+  <a href="/books">Return</a>
